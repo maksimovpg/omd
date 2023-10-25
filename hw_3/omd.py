@@ -1,3 +1,6 @@
+from typing import List
+
+
 class CountVectorizer:
     """
     Convert a list into a document-term matrix.
@@ -9,7 +12,7 @@ class CountVectorizer:
         """
         self.feature_names = []
 
-    def fit_transform(self, corpus: list) -> list:
+    def fit_transform(self, corpus: List[str]) -> List[list[int]]:
         """
         Takes corpus and returns a document-term matrix.
         """
@@ -33,7 +36,7 @@ class CountVectorizer:
 
         return count_matrix
 
-    def get_feature_names(self) -> list:
+    def get_feature_names(self) -> List[str]:
         """
         Returns the list of feature names.
         Names are columns in the document-term matrix.
